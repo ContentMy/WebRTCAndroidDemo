@@ -1,2 +1,4 @@
-# WebRTCAndroidDemo
-WebRTC的AndroidDemo
+# 基于WebRTC的测试Demo
+> 本项目基于WebRTC的一个Android版本的测试Demo
+
+目前实现了摄像头调用路通，本地模拟RTC通信以及跨进程模拟通信等，之后完善一些会更新文档明确文件和层级指引导向以及进展
