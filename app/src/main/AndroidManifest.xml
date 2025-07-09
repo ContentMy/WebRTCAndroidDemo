@@ -21,10 +21,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WebRTCDemo"
         tools:targetApi="31">
-        <service android:name=".messenger.service.WebRtcService"/>
+        <service
+            android:name=".messenger.service.WebRtcService"/>
+<!--            android:process=":webrtc_process" 真正跨进程的话，EGL不可共享，所以暂时使用aidl模拟场景-->
+
+
         <activity
             android:name=".messenger.ui.CallerActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,11 +49,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
     </application>
 
